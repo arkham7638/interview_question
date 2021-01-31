@@ -27,3 +27,32 @@ Expected Auxiliary Space: O(1).
 Constraints:
 1 <= N <= 106
 1 <= arr[i] <= 106
+
+  
+  //driver code
+  import java.util.*;
+class Array{
+    public static void main(String[]args){
+        Scanner obj = new Scanner(System.in);
+        int size = obj.nextInt();
+        int arr[] = new int[size];
+        for(int i = 0;i<size;i++){
+            arr[i] = obj.nextInt();
+        }
+        Arrays.sort(arr);
+        int largest = arr[size-1];
+        int second = 0 ;
+        for(int i =size - 2; i >= 0; i--){
+            if(arr[i] != largest)
+                second  = arr[i];
+            else
+                second = -1;
+        }
+        ArrayList<Integer> al = new ArrayList<Integer>();
+        al.add(largest);
+        al.add(second);
+        System.out.println(al);
+    }
+}
+
+//pls note that the current code does not work for some cases i.e the case towards infinte numbers
