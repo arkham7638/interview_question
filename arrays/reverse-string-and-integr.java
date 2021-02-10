@@ -30,3 +30,6 @@ class Main{
         }
     }
 }
+
+
+//for the case of the integer just replace it with the int
