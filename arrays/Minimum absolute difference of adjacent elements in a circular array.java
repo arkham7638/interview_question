@@ -14,6 +14,7 @@ class Main{
 		int res  = Math.abs(a[1] - a[0]);
 		for(int i = 2;i<size;i++) {
 			res = Math.min(res, Math.abs(a[i] - a[i-1]));
+			res = Math.min(res, Math.abs(a[size - 1] - a[0]));
 			
 		}
 		
